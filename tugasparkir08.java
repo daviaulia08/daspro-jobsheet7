@@ -5,7 +5,8 @@ public class tugasparkir08 {
 
         Scanner sc = new Scanner (System.in);
 
-        int jenis; 
+        int jenis;
+        double harga = 0; 
         int durasi;
         double total = 0;
 
@@ -26,16 +27,19 @@ public class tugasparkir08 {
                durasi = sc.nextInt();
 
                if (durasi > 5) {
-                total += 12500;
+                harga = 12500;
+                total += harga;
                } 
-               if (jenis == 1) {
-                total += durasi * 3000;
+               else if (jenis == 1) {
+                harga = durasi * 3000;
+                total += harga;
                }
-               if (jenis == 2) {
-                total += durasi * 2000;
+               else if (jenis == 2) {
+                harga = durasi * 2000;
+                total += harga;
                }
 
-            System.out.println("Total yang harus dibayar: Rp " + total);
+            System.out.println("Total yang harus dibayar: Rp " + harga);
 
             sc.nextLine();       
 
